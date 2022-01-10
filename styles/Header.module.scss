@@ -1,0 +1,93 @@
+@import './variables/variables.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+// .globalNav {
+//     ul {
+//         list-style: none;
+//         margin: 0;
+//         padding: 0;
+//         display: flex;
+//         justify-content: center;
+//     }
+//     li {
+//         margin-left: 8px;
+//     }
+// }
+
+.global_nav_div {
+    position: fixed;
+    background-color: $backgroundColorBlack;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 90;
+    justify-content: center;
+    align-items: center;
+    // transform: translateY(-100%);
+}
+
+.global_nav {
+    font-family: Digit;
+    color: $green;
+    letter-spacing: .15rem;
+
+    ul li:nth-child(1) {
+        animation: fadeIn 0.4s linear;
+    }
+    ul li:nth-child(2) {
+        animation: fadeIn 0.55s linear;
+    }
+    ul li:nth-child(3) {
+        animation: fadeIn 0.7s linear;
+    }
+    ul li:nth-child(4) {
+        animation: fadeIn 0.85s linear;
+    }
+    ul li:nth-child(5) {
+        animation: fadeIn 1s linear;
+    }
+
+    li {
+        text-align: center;
+        margin: 1.5rem 0;
+        cursor: pointer;
+
+        &:hover {
+            color: $orange;
+            text-shadow: 0 0 3px $orange;
+        }
+    }
+}
+
+
+.slide_in_from_top {
+    animation: slideInFromTop .5s ease;
+}
+
+@keyframes slideInFromTop {
+  0% { transform: translateY(-100%);}
+  100% { transform: translateY(0%);}
+}
+
+.slide_up_to_top {
+    animation: slideUpToTop 1s ease;
+}
+
+@keyframes slideUpToTop {
+  0% { transform: translateY(0%);}
+  50% { transform: translateY(-100%);}
+  100% { transform: translateY(-100%);}
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

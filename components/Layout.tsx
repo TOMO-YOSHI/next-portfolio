@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
@@ -16,6 +17,12 @@ const Layout: React.FC<Props> = ({title, keywords, description, children}) => {
     return (
         <div>
             <Head>
+                <link
+                    rel="preload"
+                    href="/fonts/Digit/Digit.ttf"
+                    as="font"
+                    crossOrigin=""
+                />
                 <title>{title}</title>
                 <meta name='description' content={description} />
                 <meta name='keywords' content={keywords} />
