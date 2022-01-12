@@ -24,19 +24,21 @@ export default function Profile() {
             </Zoom>
             <div className={styles.iconsDiv}>
                 <div className={styles.githubIconDiv}>
-                    <IconContext.Provider
-                        value={{
-                            style: {
-                                top: "32px",
-                                right: "32px",
-                                width: "32px",
-                                height: "32px",
-                                color: "white",
-                                cursor: "pointer"
-                            }
-                        }}>
-                        <FaGithub />
-                    </IconContext.Provider>
+                    <a href="https://github.com/TOMO-YOSHI">
+                        <IconContext.Provider
+                            value={{
+                                style: {
+                                    top: "32px",
+                                    right: "32px",
+                                    width: "32px",
+                                    height: "32px",
+                                    color: "white",
+                                    cursor: "pointer"
+                                }
+                            }}>
+                            <FaGithub />
+                        </IconContext.Provider>
+                    </a>
                 </div>
                 <div className={styles.linkedinIconDiv}>
                     <IconContext.Provider
