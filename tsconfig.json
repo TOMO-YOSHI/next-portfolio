@@ -22,7 +22,11 @@
     "paths": {
       "@/components/*" : ["/components/*"],
       "@/styles/*" : ["/styles/*"]
-    }
+    },
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -30,6 +34,7 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "types"
   ]
 }

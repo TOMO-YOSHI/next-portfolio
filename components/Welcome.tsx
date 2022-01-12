@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 // import Image from 'next/image'
-import * as Scroll from 'react-scroll';
+// import * as Scroll from 'react-scroll';
+import { scrollToEle } from '../utils/scroll'
 import PortraitSVG from '../components/PortraitSVG';
 import styles from '../styles/Welcome.module.scss';
 
@@ -8,16 +9,16 @@ export default function Welcome() {
     const [textShow, setTextShow] = useState(false);
     const [removeType, setRemoveType] = useState(false);
     const [linkImageShow, setLinkImageShow] = useState(false);
-    const scroller = Scroll.scroller;
+    // const scroller = Scroll.scroller;
     // const ScrollLink = Scroll.Link;
 
-    const scrollToEle = (elementName: string) => {
-        scroller.scrollTo(elementName, {
-            duration: 500,
-            delay: 100,
-            smooth: true,
-        })
-    }
+    // const scrollToEle = (elementName: string) => {
+    //     scroller.scrollTo(elementName, {
+    //         duration: 500,
+    //         delay: 100,
+    //         smooth: true,
+    //     })
+    // }
 
 
     useEffect(()=>{

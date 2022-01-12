@@ -1,0 +1,37 @@
+@import './variables/variables.scss';
+
+.worksDiv {
+    position: relative;
+    height: 85vh;
+    margin: 1rem;
+    margin-top: 15vh;
+}
+
+.nextSection {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: digit;
+    font-size: 24px;
+    color: $green;
+    text-shadow: 0 0 3px $green;
+    cursor: pointer;
+    // animation: moveUpDown 1s infinite;
+}
+
+.rotateAni {
+    display: inline-block;
+    animation: moveUpDown 1s infinite;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(-4px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(4px) rotate(90deg);
+    }
+    100% {
+        transform: translateY(-4px) rotate(90deg);
+    }
+}
