@@ -89,6 +89,8 @@ $effectTime: 2.5s;
 .index_portrait {
     position: absolute;
     opacity: $portraitOpacity;
+    height: 100%;
+    width: 100%;
     // width: 400px;
     // filter: grayscale(80%);
 

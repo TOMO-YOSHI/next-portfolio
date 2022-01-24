@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { scrollToEle } from '../utils/scroll';
 import SkillsList from '../components/SkillsList';
 import styles from '../styles/Skills.module.scss';
@@ -45,6 +46,19 @@ export default function Skills() {
                     {
                         logos.map((el, i) => (
                             <img key={i} src={el} alt={el} />
+                            // <div
+                            //     key={i}
+                            //     style={{ height: "80px", width: "100%", display: "inline-block"}}
+                            //     // style={{display: "block"}}
+                            // >
+                            //     <Image
+                            //         quality="50"
+                            //         objectFit="scale-down"
+                            //         layout="fill"
+                            //         src={el}
+                            //         alt={el}
+                            //     />
+                            // </div>
                         ))
                     }
                 </div>
