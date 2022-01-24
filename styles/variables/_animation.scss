@@ -1,0 +1,265 @@
+// General *************************************
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(-4px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(4px) rotate(90deg);
+    }
+    100% {
+        transform: translateY(-4px) rotate(90deg);
+    }
+}
+// **********************************************
+
+// Skills ***************************************
+@keyframes drawTopLine {
+    0% {
+        width: 0;
+    }
+    25% {
+        border: $green solid 1px;
+        box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 1px 0.5px 0 rgba(0, 255, 0, 1);
+        width: 100%;
+    }
+    100% {
+        border: $green solid 1px;
+        box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 1px 0.5px 0 rgba(0, 255, 0, 1);
+        width: 100%;
+    }
+}
+@keyframes drawRightLine {
+    0% {
+        height: 0;
+    }
+    25% {
+        height: 0%;
+    }
+    50% {
+        border: $green solid 1px;
+        box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 1px 0.5px 0 rgba(0, 255, 0, 1);
+        height: 100%;
+    }
+    100% {
+        border: $green solid 1px;
+        box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 1px 0.5px 0 rgba(0, 255, 0, 1);
+        height: 100%;
+    }
+}
+@keyframes drawBottomLine {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 0%;
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+        border: $green solid 1px;
+        box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 1px 0.5px 0 rgba(0, 255, 0, 1);
+        width: 100%;
+    }
+    100% {
+        border: $green solid 1px;
+        box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 1px 0.5px 0 rgba(0, 255, 0, 1);
+        width: 100%;
+    }
+}
+
+@keyframes drawLeftLine {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+        height: 0%;
+        opacity: 0;
+    }
+    75% {
+        height: 0%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        border: $green solid 1px;
+        box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 1px 0.5px 0 rgba(0, 255, 0, 1);
+        height: 100%;
+    }
+}
+
+@keyframes fadeIn {
+  0% {
+    background:rgba(0,0,0,.0);
+  }
+  100% {
+    background:rgba(0,0,0,.7);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    background:rgba(0,0,0,.7);
+  }
+  100% {
+    background:rgba(0,0,0,.0);
+  }
+}
+
+
+@keyframes quickScaleDown {
+  0% {
+    transform:scale(1);
+  }
+  99.9% {
+    transform:scale(1);
+  }
+  100% {
+    transform:scale(0);
+  }
+}
+
+@keyframes modalFadeIn {
+  0% {
+    background-color:transparent;
+  }
+  100% {
+    background-color: rgba(16,16,16, .7);
+  }
+}
+
+@keyframes modalFadeOut {
+  0% {
+    background-color: rgba(16,16,16, .7);
+  }
+  100% {
+    background-color:transparent;
+  }
+}
+
+@keyframes modalContentFadeIn {
+  0% {
+    opacity:0;
+    top:-20px;
+  }
+  100% {
+    opacity:1;
+    top:0;
+  }
+}
+
+@keyframes modalContentFadeOut {
+  0% {
+    opacity:1;
+    top:0px;
+  }
+  100% {
+    opacity:0;
+    top:-20px;
+  }
+}
+// **********************************************
+
+// Experience ***********************************
+@keyframes draxVerticalLine {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 50%;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes showFirstDot {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes showSecondDot {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    41% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes showThirdDot {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    71% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showExpeFirstDiv {
+    0% {
+       opacity: 0;
+    }
+    5% {
+       opacity: 0;
+    }
+    6% {
+       opacity: 1;
+    }
+    100% {
+       opacity: 1;
+    }
+}
+@keyframes showExpeSecondDiv {
+    0% {
+       opacity: 0;
+    }
+    40% {
+       opacity: 0;
+    }
+    41% {
+       opacity: 1;
+    }
+    100% {
+       opacity: 1;
+    }
+}
+@keyframes showExpeThirdDiv {
+    0% {
+       opacity: 0;
+    }
+    70% {
+       opacity: 0;
+    }
+    71% {
+       opacity: 1;
+    }
+    100% {
+       opacity: 1;
+    }
+}
+
+// **********************************************
+
+//  ***********************************

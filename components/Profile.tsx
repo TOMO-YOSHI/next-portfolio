@@ -24,12 +24,10 @@ export default function Profile() {
             </Zoom>
             <div className={styles.iconsDiv}>
                 <div className={styles.githubIconDiv}>
-                    <a href="https://github.com/TOMO-YOSHI">
+                    <a href="https://github.com/TOMO-YOSHI" target="_blank">
                         <IconContext.Provider
                             value={{
                                 style: {
-                                    top: "32px",
-                                    right: "32px",
                                     width: "32px",
                                     height: "32px",
                                     color: "white",
@@ -41,19 +39,19 @@ export default function Profile() {
                     </a>
                 </div>
                 <div className={styles.linkedinIconDiv}>
-                    <IconContext.Provider
-                        value={{
-                            style: {
-                                top: "32px",
-                                right: "32px",
-                                width: "32px",
-                                height: "32px",
-                                color: "white",
-                                cursor: "pointer"
-                            }
-                        }}>
-                        <FaLinkedin />
-                    </IconContext.Provider>
+                    <a href="https://www.linkedin.com/in/tomohiro/" target="_blank" rel="noopener noreferrer">
+                        <IconContext.Provider
+                            value={{
+                                style: {
+                                    width: "32px",
+                                    height: "32px",
+                                    color: "white",
+                                    cursor: "pointer"
+                                }
+                            }}>
+                            <FaLinkedin />
+                        </IconContext.Provider>
+                    </a>
                 </div>
             </div>
             <div

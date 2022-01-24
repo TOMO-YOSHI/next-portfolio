@@ -7,21 +7,137 @@
     margin-top: 15vh;
 }
 
-.nextSection {
+// Scroll Animation ***********************
+// Reference ******************************
+// https://stackoverflow.com/questions/59980269/infinite-horizontal-scrolling-image-loop
+// ****************************************
+.container {
+  height:350px; 
+  position:relative; 
+  overflow:hidden;
+}
+
+.imagebanner {
+  position:absolute; 
+  top:0px; 
+  left:0px; 
+  overflow:hidden; 
+  white-space: nowrap;
+  animation: bannermove 60s linear infinite;
+  background-color: rgba($color: #ffffff, $alpha: 0.2);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.imagebannerSecond {
+  position:absolute; 
+  top:100px; 
+//   left:-500%;
+  overflow:hidden; 
+  white-space: nowrap;
+//   animation: bannermoveReverse 60s linear infinite;
+  animation: bannermove 80s linear infinite;
+  background-color: rgba($color: #ffffff, $alpha: 0.2);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.imagebannerThird {
+  position:absolute; 
+  top:200px; 
+  left:0%;
+  overflow:hidden; 
+  white-space: nowrap;
+  animation: bannermove 40s linear infinite;
+  background-color: rgba($color: #ffffff, $alpha: 0.2);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.imagebanner img,
+.imagebannerSecond img,
+.imagebannerThird img { 
+  margin: 0 2rem;
+  height: 80px;
+  display: inline-block;
+}
+
+// .skills_background_white {
+//     background-color: $textWhite;
+// }
+
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  50% {
+      transform: translate(-50%, 0);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}
+
+@keyframes bannermoveReverse {
+  0% {
+      transform: translate(0, 0);
+  }
+  50% {
+      transform: translate(50%, 0);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}
+// Scroll Animation END *******************
+
+// Modal **********************************
+.modal {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    cursor: pointer;
+    width: 440px;
+    max-height: 330px;
+    // background-color: rgba($color: #101010, $alpha: 0.7);
+    // border: $green solid 2px;
+    // padding: 0.25rem;
+}
+// Modal END ******************************
+.buttonDiv {
+    text-align: center;
+}
+
+.button {
+    @extend %buttonStyleReset;
     font-family: digit;
     font-size: 24px;
     color: $green;
     text-shadow: 0 0 3px $green;
-    cursor: pointer;
-    // animation: moveUpDown 1s infinite;
+    border: $green solid 1px;
+    padding: 8px;
+    &:hover {
+        color: $orange;
+        text-shadow: 0 0 3px $orange;
+        border: $orange solid 1px;
+        box-shadow: 0 2px 4px 0 rgba(255, 165, 0, 1), 0 1px 0.5px 0 rgba(255, 165, 0, 1);
+    }
+;
+}
+
+.nextSection {
+    @extend %nextText;
 }
 
 .rotateAni {
     display: inline-block;
     animation: moveUpDown 1s infinite;
+}
+
+@media screen and (max-width: 575px) {
+    .modal {
+        width: 300px;
+        max-height: 330px;
+    }
 }
 
 @keyframes moveUpDown {

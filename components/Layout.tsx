@@ -15,7 +15,7 @@ interface Props {
 
 const Layout: React.FC<Props> = ({title, keywords, description, children}) => {
     return (
-        <div>
+        <div className={styles.layoutDiv}>
             <Head>
                 <link
                     rel="preload"

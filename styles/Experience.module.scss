@@ -5,18 +5,73 @@
     height: 85vh;
     margin: 1rem;
     margin-top: 15vh;
+
+    h3 {
+        color: $orange;
+    }
+}
+
+.sectionMain {
+    position: relative;
+    height: 80%;
+}
+
+.verticalLine {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+    border: $green solid 1px;
+    animation: draxVerticalLine 1s linear;
+}
+
+.firstDot,
+.secondDot,
+.thirdDot {
+    position: absolute;
+    left: calc(50% - 6px);
+    width: 13px;
+    height: 13px;
+    border: $green solid 1px;
+    background-color: $green;
+}
+
+.firstDot {
+    top: 5%;
+    animation: showFirstDot 1s linear;
+}
+.secondDot {
+    top: 40%;
+    animation: showSecondDot 1s linear;
+}
+.thirdDot {
+    top: 70%;
+    animation: showThirdDot 1s linear;
+}
+
+.firstDiv {
+    position: absolute;
+    top: calc(5% - 28px);
+    left: calc(50% + 24px);
+    animation: showExpeFirstDiv 1s linear;
+}
+.secondDiv {
+    position: absolute;
+    top: calc(40% - 28px);
+    left: calc(50% - 24px);
+    text-align: right;
+    transform: translateX(-100%);
+    animation: showExpeSecondDiv 1s linear;
+}
+.thirdDiv {
+    position: absolute;
+    top: calc(70% - 28px );
+    left: calc(50% + 24px);
+    animation: showExpeThirdDiv 1s linear;
 }
 
 .nextSection {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-family: digit;
-    font-size: 24px;
-    color: $green;
-    text-shadow: 0 0 3px $green;
-    cursor: pointer;
-    // animation: moveUpDown 1s infinite;
+    @extend %nextText;
 }
 
 .rotateAni {
@@ -24,31 +79,39 @@
     animation: moveUpDown 1s infinite;
 }
 
-@keyframes moveUpDown {
-    0% {
-        transform: translateY(-4px) rotate(90deg);
-    }
-    50% {
-        transform: translateY(4px) rotate(90deg);
-    }
-    100% {
-        transform: translateY(-4px) rotate(90deg);
+// Medium devices (tablets, 768px and up)
+@media screen and (max-width: 767px) {
+    .experienceDiv {
+        h3 {
+            // font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .verticalLine {
+            left: 40px;
+        }
+        .firstDot,
+        .secondDot,
+        .thirdDot {
+            left: calc(40px - 6px );
+        }
+
+        .firstDiv,
+        .secondDiv,
+        .thirdDiv {
+            text-align: left;
+            left: 68px;
+        }
+
+        .secondDiv {
+            transform: translateX(0);
+        }
     }
 }
-// @keyframes moveUpDown {
-//     0% {
-//         transform: translateY(-4px) rotate(90deg);
-//     }
-//     25% {
-//         transform: translateY(0px) rotate(90deg);
-//     }
-//     50% {
-//         transform: translateY(4px) rotate(90deg);
-//     }
-//     75% {
-//         transform: translateY(0px) rotate(90deg);
-//     }
-//     100% {
-//         transform: translateY(-4px) rotate(90deg);
-//     }
-// }
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (max-width: 575px) {
+
+}
+

@@ -1,0 +1,23 @@
+%buttonStyleReset {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+%nextText {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: digit;
+    font-size: 24px;
+    color: $green;
+    text-shadow: 0 0 3px $green;
+    cursor: pointer;
+    &:hover {
+        color: $orange;
+        text-shadow: 0 0 3px $orange;
+    }
+}

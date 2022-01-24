@@ -5,6 +5,7 @@
     height: 85vh;
     margin: 2rem;
     margin-top: 15vh;
+    z-index: 100;
 }
 
 .aboutDiv {
@@ -44,7 +45,7 @@
 .iconsDiv {
     display: flex;
     justify-content: right;
-    margin-top: 12px;
+    margin-top: 16px;
 }
 
 .githubIconDiv {
@@ -59,15 +60,7 @@
 }
 
 .nextSection {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-family: digit;
-    font-size: 24px;
-    color: $green;
-    text-shadow: 0 0 3px $green;
-    cursor: pointer;
-    // animation: moveUpDown 1s infinite;
+    @extend %nextText;
 }
 
 .rotateAni {
@@ -77,10 +70,26 @@
 
 @media screen and (max-width: 575px) {
     .aboutDiv {
+        // border: none;
+        // -webkit-box-shadow: none;
+        // -moz-box-shadow: none;
+        // box-shadow: none;
+        padding: 16px;
+
         p {
             font-size: 18px;
         }
+        p:first-of-type {
+            margin-top: 8px;
+        }
+
+        // p:last-of-type {
+        //     margin-bottom: 8px;
+        // }
+
     }
+
+
 }
 
 

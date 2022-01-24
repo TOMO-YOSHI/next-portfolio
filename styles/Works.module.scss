@@ -8,20 +8,54 @@
 }
 
 .nextSection {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-family: digit;
-    font-size: 24px;
-    color: $green;
-    text-shadow: 0 0 3px $green;
-    cursor: pointer;
-    // animation: moveUpDown 1s infinite;
+    @extend %nextText;
 }
 
 .rotateAni {
     display: inline-block;
     animation: moveUpDown 1s infinite;
+}
+
+.comingSoonDiv {
+    height: 80%;
+    border: $green solid 1px;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.comingSoon {
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin-left: 16px;
+        font-size: 18px;
+    }
+}
+
+.githubLink {
+    align-self: flex-start;
+    justify-self: center;
+    width: fit-content;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        margin-left: 16px;
+        font-size: 16px;
+    }
+
+    &:hover {
+        color: $orange;
+    }
 }
 
 @keyframes moveUpDown {
