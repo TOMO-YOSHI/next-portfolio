@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { scrollToEle } from '../utils/scroll';
 import SkillsList from '../components/SkillsList';
 import styles from '../styles/Skills.module.scss';
-// import SkillsPage from 'pages/skills';
 
 const imagesLogo = [
     "/images/tech-logo/html.png",
