@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+// import Image from 'next/image';
 import { scrollToEle } from '../utils/scroll';
 import SkillsList from '../components/SkillsList';
 import styles from '../styles/Skills.module.scss';
@@ -29,10 +29,22 @@ const imagesLogo = [
     "/images/tech-logo/128px-WordPress_W_Mark.png",
 ]
 
+declare global {
+    interface Window {
+        platform: any;
+    }
+}
+
 export default function Skills() {
     const [showList, setShowList] = useState(false);
     const [logos] = useState([...imagesLogo, ...imagesLogo, ...imagesLogo]);
     const [reversedLogos] = useState([...imagesLogo.reverse(), ...imagesLogo, ...imagesLogo]);
+    const [browser, setBrowser] = useState("");
+
+    useEffect(() => {
+        // console.log(window.platform.name);
+        setBrowser(window.platform.name)
+    }, [])
 
     return (
         <div
@@ -42,9 +54,9 @@ export default function Skills() {
                 onClick={() => scrollToEle('skills')}
             >Skills</h2>
             <div className={styles.container}>
-                <div className={styles.imagebanner}>
+                <div className={[styles.imagebanner, styles.imagebannerAnimation].join(' ')}>
                     {
-                        logos.map((el, i) => (
+                        browser !== "Safari" && logos.map((el, i) => (
                             <img key={i} src={el} alt={el} />
                             // <div
                             //     key={i}
@@ -62,20 +74,48 @@ export default function Skills() {
                         ))
                     }
                 </div>
-                <div className={styles.imagebannerSecond}>
+                <div className={[styles.imagebannerSecond, styles.imagebannerSecondAnimation].join(' ')}>
                     {
-                        reversedLogos.map((el, i) => (
+                        browser !== "Safari" && reversedLogos.map((el, i) => (
                             <img key={i} src={el} alt={el} />
                         ))
                     }
                 </div>
-                <div className={styles.imagebannerThird}>
+                <div className={[styles.imagebannerThird, styles.imagebannerThirdAnimation].join(' ')}>
                     {
-                        logos.map((el, i) => (
+                        browser !== "Safari" && logos.map((el, i) => (
                             <img key={i} src={el} alt={el} />
                         ))
                     }
                 </div>
+                {
+                    browser === "Safari" &&
+                    (
+                        <>
+                            <div className={[styles.imagebanner, styles.imagebannerStatic].join(' ')}>
+                                {
+                                    imagesLogo.map((el, i) => (
+                                        <img key={i} src={el} alt={el} />
+                                    ))
+                                }
+                            </div>
+                            <div className={[styles.imagebannerSecond, styles.imagebannerSecondStatic].join(' ')}>
+                                {
+                                    imagesLogo.map((el, i) => (
+                                        <img key={i} src={el} alt={el} />
+                                    ))
+                                }
+                            </div>
+                            <div className={[styles.imagebannerThird, styles.imagebannerThirdStatic].join(' ')}>
+                                {
+                                    imagesLogo.map((el, i) => (
+                                        <img key={i} src={el} alt={el} />
+                                    ))
+                                }
+                            </div>
+                        </>
+                    ) 
+                }
             </div>
             {
                 showList ?

@@ -3,12 +3,22 @@ import styles from '../styles/SkillsList.module.scss';
 
 export default function SkillsList() {
     const [showLine, setShowLine] = useState(false);
+    const [browser, setBrowser] = useState("");
+
+    useEffect(() => {
+        // console.log(window.platform.name);
+        setBrowser(window.platform.name)
+    }, [])
 
     useEffect(()=>{
         setTimeout(() => {
             setShowLine(true);
         }, 1000);
     }, [])
+
+    useEffect(() => {
+        browser === "Safari" && setShowLine(true);
+    }, [browser])
 
     return (
         <div className={showLine ? [styles.skillsListDiv, styles.line].join(' ') : styles.skillsListDiv}>

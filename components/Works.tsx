@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { scrollToEle } from '../utils/scroll';
 import { FaTools, FaGithubAlt } from 'react-icons/fa';
 import { IconContext } from "react-icons";
+// import BgAnimationSection from '../components/BgAnimationSection';
 import styles from '../styles/Works.module.scss';
 
 export default function Works() {
@@ -11,6 +12,7 @@ export default function Works() {
         <div
             className={styles.worksDiv}
         >
+            {/* <BgAnimationSection /> */}
             <h2
                 onClick={() => scrollToEle('works')}
             >Works</h2>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 // import * as Scroll from 'react-scroll';
 import { scrollToEle } from '../utils/scroll'
 import PortraitSVG from '../components/PortraitSVG';
@@ -72,18 +72,18 @@ export default function Welcome() {
                         <div
                             className={[styles.index_portrait, styles.opacity_zero].join(' ')}
                         >
-                            {/* <img
+                            <img
                                 // width={50}
                                 // height={100}
                                 src="/images/portrait.png"
-                                alt="Tomo portrait" /> */}
-                            <Image
+                                alt="Tomo portrait" />
+                            {/* <Image
                                 quality="1"
                                 objectFit="contain"                          
                                 layout="fill"
                                 src="/images/portrait.png"
                                 alt="Tomo portrait"
-                            />
+                            /> */}
                         </div>
                         <div
                             className={[styles.index_portrait_line, styles.opacity_zero].join(' ')}
