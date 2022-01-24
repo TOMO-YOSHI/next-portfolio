@@ -24,7 +24,7 @@ export default function Profile() {
             </Zoom>
             <div className={styles.iconsDiv}>
                 <div className={styles.githubIconDiv}>
-                    <a href="https://github.com/TOMO-YOSHI" target="_blank">
+                    <a href="https://github.com/TOMO-YOSHI" target="_blank" rel="noopener noreferrer">
                         <IconContext.Provider
                             value={{
                                 style: {

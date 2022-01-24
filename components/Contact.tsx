@@ -103,7 +103,7 @@ export default function Contact() {
                 onClick={() => scrollToEle('contact')}
             >Contact</h2>
             <div className={styles.contactSectionMainDiv}>
-                <p className={styles.description}>If you have something to talk to me, feel free to get in touch with me. I'm waiting for your kind email!</p>
+                <p className={styles.description}>If you have something to talk to me, feel free to get in touch with me.I&apos;m waiting for your kind email!</p>
                 <div className={styles.form_div}>
                     <ContactForm />
                     {/* <form className={styles.contact_form} action='POST'>

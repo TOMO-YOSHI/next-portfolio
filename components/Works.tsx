@@ -33,7 +33,7 @@ export default function Works() {
                     onMouseOver={()=>setHover(true)}
                     onMouseOut={()=>setHover(false)}
                 >
-                    <a href="https://github.com/TOMO-YOSHI" target="_blank">
+                    <a href="https://github.com/TOMO-YOSHI" target="_blank" rel="noopener noreferrer">
                         <IconContext.Provider
                             value={{
                                 style: {
