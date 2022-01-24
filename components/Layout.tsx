@@ -26,6 +26,7 @@ const Layout: React.FC<Props> = ({title, keywords, description, children}) => {
                 <title>{title}</title>
                 <meta name='description' content={description} />
                 <meta name='keywords' content={keywords} />
+                <link rel="icon" type="image/png" href="./images/portfolio.png" />
             </Head>
 
             <Header />

@@ -1,31 +1,18 @@
-// import Link from 'next/link';
-import { useState } from 'react';
-import * as Scroll from 'react-scroll';
+import { useState, useCallback } from 'react';
+import { scrollToEle } from '../utils/scroll';
 import HamburgerMenu from '../components/HamburgerMenu'
 import styles from '../styles/Header.module.scss';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const scroller = Scroll.scroller;
-    // const ScrollLink = Scroll.Link;
-
-    const scrollToEle = (elementName: string) => {
-        scroller.scrollTo(elementName, {
-            duration: 500,
-            delay: 100,
-            smooth: true,
-            // containerId: 'ContainerElementID',
-            // offset: 50, // Scrolls to element + 50 pixels down the page
-        })
-    }
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
-                {/* <Link href='/'>
+            {/* <div className={styles.logo}>
+                <Link href='/'>
                     <a>TOMO's Portfolio</a>
-                </Link> */}
-            </div>
+                </Link>
+            </div> */}
 
             <HamburgerMenu
                 menuOpen={menuOpen}
@@ -40,14 +27,17 @@ export default function Header() {
                                 [styles.global_nav_div, styles.slide_up_to_top].join(' ')
                         }
                     >
-                        <nav className={styles.global_nav}>
+                        <nav
+                            className={styles.global_nav}
+                            onClick={()=>setMenuOpen(false)}
+                        >
                             <ul>
-                                {/* <li>
+                                <li>
                                     <div
                                         onClick={() => scrollToEle("welcome")}>
                                         <a>Top</a>
                                     </div>
-                                </li> */}
+                                </li>
                                 <li>
                                     <div
                                         onClick={() => scrollToEle("profile")}>

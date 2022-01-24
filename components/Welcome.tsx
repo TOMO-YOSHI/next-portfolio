@@ -52,7 +52,7 @@ export default function Welcome() {
                         styles.siteTitleH1
                     :
                         [styles.siteTitleH1,styles.visibility_hidden].join(' ')
-                }>TOMO's Portfolio</h1><br />
+                }>TOMO&apos;s Portfolio</h1><br />
                 <div
                     className={
                         linkImageShow ?

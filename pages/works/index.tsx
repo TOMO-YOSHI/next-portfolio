@@ -12,7 +12,7 @@ export default function WorksPage({works}: Props) {
 
     return (
         <Layout title="TOMO's Works">
-            <h1>TOMO's Works</h1>
+            <h1>TOMO&apos;s Works</h1>
             {works.length === 0 && <h3>No works to show</h3>}
 
             {works.map((wor) => (
