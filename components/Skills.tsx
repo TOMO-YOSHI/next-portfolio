@@ -43,7 +43,8 @@ export default function Skills() {
 
     useEffect(() => {
         // console.log(window.platform.name);
-        setBrowser(window.platform.name)
+        // setBrowser(window.platform.name)
+        setBrowser("Chrome")
     }, [])
 
     return (

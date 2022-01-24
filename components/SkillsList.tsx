@@ -7,7 +7,8 @@ export default function SkillsList() {
 
     useEffect(() => {
         // console.log(window.platform.name);
-        setBrowser(window.platform.name)
+        // setBrowser(window.platform.name);
+        setBrowser("Chrome")
     }, [])
 
     useEffect(()=>{
