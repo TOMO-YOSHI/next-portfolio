@@ -1,0 +1,30 @@
+@import './variables/variables.scss';
+
+.errorDiv {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h4 {
+        color: $orange;
+    }
+
+    a {
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+.h1Div {
+    display: flex;
+    align-items: center;
+    color: $green;
+    font-size: 24px;
+
+    h1 {
+        margin: 0;
+    }
+}
