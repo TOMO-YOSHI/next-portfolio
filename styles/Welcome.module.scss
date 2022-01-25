@@ -142,6 +142,20 @@ $effectTime: 2.5s;
   visibility: hidden;
 }
 
+.skipDiv {
+    // color: $textWhite;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.skipArrow {
+    font-size: 12px;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
 @media screen and (max-width: 575px) {
     .welcome_message {
         padding: 0;

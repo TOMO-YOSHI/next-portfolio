@@ -9,6 +9,7 @@ export default function Welcome() {
     const [textShow, setTextShow] = useState(false);
     const [removeType, setRemoveType] = useState(false);
     const [linkImageShow, setLinkImageShow] = useState(false);
+    const [skipShow, setSkipShow] = useState(true);
     // const scroller = Scroll.scroller;
     // const ScrollLink = Scroll.Link;
 
@@ -28,6 +29,7 @@ export default function Welcome() {
         }
         const finishAni = () => {
             setLinkImageShow(true)
+            setSkipShow(false)
         }
         setTimeout(changeStyle, 1500)
         setTimeout(finishAni, 2900)
@@ -62,7 +64,7 @@ export default function Welcome() {
                     }
                     onClick={() => scrollToEle('profile')}
                 >
-                    Look into it
+                    Proceed
                 </div>
             </div>
             <div>
@@ -95,6 +97,13 @@ export default function Welcome() {
                     : null
                 }
             </div>
+            {
+                skipShow &&
+                    <div 
+                        onClick={() => scrollToEle('profile')}
+                        className={styles.skipDiv}
+                        >Skip <span className={styles.skipArrow}>{'>>'}</span></div>
+            }
         </div>
     )
 }
