@@ -161,33 +161,31 @@
         width: 300px;
         max-height: 330px;
     }
+    .imagebannerAnimation {
+      animation: none;
+      transform: translate(0, 0)
+    }
+    .imagebannerSecondAnimation {
+      animation: none;
+      transform: translate(-40%, 0)
+    }
+    .imagebannerThirdAnimation {
+      animation: none;
+      transform: translate(-50%, 0)
+    }
 }
 
-@keyframes moveUpDown {
-    0% {
-        transform: translateY(-4px) rotate(90deg);
-    }
-    50% {
-        transform: translateY(4px) rotate(90deg);
-    }
-    100% {
-        transform: translateY(-4px) rotate(90deg);
-    }
+@supports (background: -webkit-named-image(i)) {
+  .imagebannerAnimation {
+    animation: none;
+    transform: translate(0, 0)
+  }
+  .imagebannerSecondAnimation {
+    animation: none;
+    transform: translate(-40%, 0)
+  }
+  .imagebannerThirdAnimation {
+    animation: none;
+    transform: translate(-50%, 0)
+  }
 }
-// @keyframes moveUpDown {
-//     0% {
-//         transform: translateY(-4px) rotate(90deg);
-//     }
-//     25% {
-//         transform: translateY(0px) rotate(90deg);
-//     }
-//     50% {
-//         transform: translateY(4px) rotate(90deg);
-//     }
-//     75% {
-//         transform: translateY(0px) rotate(90deg);
-//     }
-//     100% {
-//         transform: translateY(-4px) rotate(90deg);
-//     }
-// }
