@@ -1,4 +1,35 @@
+@import "../styles/variables/variables";
+
 .footer {
     text-align: center;
     font-size: smaller;
+}
+
+.goToTopP {
+    font-family: digit;
+    color: $green;
+    text-shadow: 0 0 3px $green;
+    border: $green solid 1px;
+    width: fit-content;
+    padding: 4px;
+    margin: 2rem auto 1rem;
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+        color: $orange;
+        text-shadow: 0 0 3px $orange;
+        border: $orange solid 1px;
+    }
+}
+
+.rotate {
+    display: inline-block;
+    animation: moveUpDown 1s infinite;
+}
+
+@media screen and (max-width: 575px) {
+    .goToTopP {
+        display: block;
+    }
 }
