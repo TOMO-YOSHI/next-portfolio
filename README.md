@@ -1,3 +1,11 @@
+# Tomohiro's portfolio website
+## About this project
+
+This is the Next.js version of [my portfolio website](https://tomohirodev.com/).
+I have updated [the old version of my portofolio](https://github.com/TOMO-YOSHI/portfolio-site).
+
+## Technology stack
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
