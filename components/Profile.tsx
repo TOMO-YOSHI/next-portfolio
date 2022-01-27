@@ -18,7 +18,7 @@ export default function Profile() {
                     {/* <h3>About TOMO</h3> */}
                     <div>
                         <p>Hello, I am Tomohiro Yoshida.</p>
-                        <p>I&apos;m a <span className={styles.orange}>Full-Stack Web Developer</span> with a background in public service. I am proficient in practical web development skills including both server-side and client-side to create a user-friendly application. Through projects and practical experience, I am accustomed to collaborating with team members from different professions.</p>
+                        <p>I am a <span className={styles.orange}>Full-Stack Web Developer</span> who has working experience in a Canadian start-up company. I am proficient in server-less system architecture, front-end development, and DevOps. Through projects, I have implemented advanced features in web development, such as video call with WebRTC, real-time update/notification with WebSocket, authentication/authorization, and so on.</p>
                     </div>
                 </div>
             </Zoom>
