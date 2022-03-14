@@ -17,6 +17,10 @@ const Layout: React.FC<Props> = ({title, keywords, description, children}) => {
     return (
         <div className={styles.layoutDiv}>
             <Head>
+                <meta property="og:image" content="https://tomo-portfolio.s3-us-west-2.amazonaws.com/portfolio_social_media_image.png" />
+                <meta property="og:url" content="https://tomohirodev.com" />
+                <meta property="og:title" content="TOMO'S Portfolio" />
+                <meta property="og:description" content="This is Tomohiro's portfolio site to showcase web development skills." />
                 <link
                     rel="preload"
                     href="/fonts/Digit/Digit.ttf"
