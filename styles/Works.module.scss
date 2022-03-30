@@ -20,11 +20,12 @@
 .comingSoonDiv {
     height: 80%;
     border: $green solid 1px;
-    // display: flex;
+    display: flex;
     // align-items: center;
-    // flex-direction: column;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    flex-direction: column;
+    // display: grid;
+    // grid-template-rows: 1fr 1fr;
 }
 
 .comingSoon {
@@ -32,6 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 
     p {
         margin-left: 16px;
@@ -43,6 +45,7 @@
     align-self: flex-start;
     justify-self: center;
     width: fit-content;
+    margin: 0 auto;
 
     a {
         display: flex;
@@ -52,11 +55,13 @@
     p {
         margin-left: 16px;
         font-size: 16px;
+        // &:hover {
+        //     color: $orange;
+        // }
     }
-
-    &:hover {
-        color: $orange;
-    }
+    // &:hover {
+    //     color: $orange !important;
+    // }
 }
 
 @keyframes moveUpDown {
