@@ -2,7 +2,7 @@
 
 .contactDiv {
     position: relative;
-    height: 85vh;
+    // height: 85vh;
     margin: 1rem;
     margin-top: 15vh;
 }
@@ -126,6 +126,8 @@
 
 .nextSection {
     @extend %nextText;
+    position: relative;
+    text-align: right;
 }
 
 .rotateAni {
