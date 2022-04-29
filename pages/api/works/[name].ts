@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       let response = await getWorksWithAsset();
 
-      response = response.filter((el) => el.name.includes(name.toString()));
+      response = response.filter((el) => el.name.toLowerCase().includes(name.toString().toLowerCase()));
 
       res.status(200).json(response);
 
