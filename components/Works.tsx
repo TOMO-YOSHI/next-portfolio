@@ -32,6 +32,7 @@ export default function Works({works}) {
                 {
                     works.map((work: Work )=> (
                         <WorkItem
+                            key={work.id}
                             work={work}
                             openModal={() => openModal(work)} />
                     ))
@@ -188,7 +189,8 @@ export default function Works({works}) {
                                 selectedWork?.youtubeIframe ?
                                     <>
                                         <iframe
-                                            src={selectedWork?.youtubeIframe} frameBorder="0"
+                                            src={selectedWork?.youtubeIframe}
+                                            frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             width="560"
                                             height="315"
@@ -218,19 +220,20 @@ export default function Works({works}) {
                         <div className={styles.work_links}>
                             {
                                 selectedWork?.webPageUrl ? 
-                                    <p><a href={selectedWork?.webPageUrl}target="_blank">Visit the Actual Web Page</a></p>
+                                    <p><a href={selectedWork?.webPageUrl} target="_blank" rel="noreferrer">Visit the Actual Web Page</a></p>
                                     :
                                     ""
                             }
                             {
                                 selectedWork?.githubUrl ?
-                                    <p><a href={selectedWork?.githubUrl} target="_blank">Look into the Code (Go to GitHub)</a></p>
+                                    <p><a href={selectedWork?.githubUrl} target="_blank" rel="noreferrer">Look into the Code (Go to GitHub)</a></p>
                                     :
                                     <p className="orange">Sorry Github is private !</p>
                             }
                         </div>
                     </div>
-                </div>            </Modal>
+                </div>
+            </Modal>
         </div>
     )
 }
