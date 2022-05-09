@@ -3,9 +3,10 @@
 .skillsDiv {
     position: relative;
     height: 85vh;
-    margin: 1rem;
+    margin: 1rem auto;
     margin-top: 15vh;
     // z-index: 50;
+    max-width: 1000px;
 }
 
 // Scroll Animation ***********************
@@ -86,6 +87,12 @@
 // .skills_background_white {
 //     background-color: $textWhite;
 // }
+
+@media screen and (max-width: 1000px) {
+    .skillsDiv {
+        margin: 20px 16px;
+    }
+}
 
 @keyframes bannermove {
   0% {

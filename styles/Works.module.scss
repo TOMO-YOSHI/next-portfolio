@@ -2,14 +2,18 @@
 
 .worksDiv {
     position: relative;
-    height: 85vh;
-    margin: 1rem;
+    // height: 85vh;
+    margin: 1rem auto;
     margin-top: 15vh;
     // z-index: 50;
+    max-width: 1000px;
 }
 
 .nextSection {
     @extend %nextText;
+    position: relative;
+    text-align: right;
+    margin-top: 16px;
 }
 
 .rotateAni {
@@ -64,6 +68,102 @@
     // }
 }
 
+.worksGridDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.workNameH2 {
+    padding: 0 .5rem;
+    font-size: 32px;
+    cursor: inherit;
+}
+
+.modalContentsDiv {
+    display: grid;
+    grid-template-columns: 550px 1fr;
+    grid-column-gap: 2rem;
+
+    img {
+        width: 100%;
+        height: auto;
+        border: .25px solid $textWhite;
+    }
+}
+
+.each_work_description {
+    font-size: 1.25rem;
+
+    p {
+        margin: 0;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+
+        &::after {
+            content: " / ";
+        }
+
+        &:last-of-type::after {
+            content: "";
+        }
+    }
+}
+
+.about_this_work {
+    margin-top: 1rem !important;
+    color: $orange;
+}
+
+.work_links {
+    margin-top: 1rem;
+    font-family: digit;
+    letter-spacing: .1rem;
+    color: $green;
+}
+
+.work_links p {
+    margin-top: .25rem;
+}
+
+.work_links a:hover {
+    color: $orange;
+    text-shadow: 0 0 3px $orange;
+}
+
+.orange {
+    color: $orange;
+}
+
+@media screen and (max-width: 1000px) {
+    .worksDiv {
+        margin: 20px 16px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .modalContentsDiv {
+        display: block;
+
+        iframe {
+            width: 100%;
+            // height: 100%;
+        }
+    }
+
+    .each_work_description {
+        margin-top: 24px;
+    }
+}
+
+
+
 @keyframes moveUpDown {
     0% {
         transform: translateY(-4px) rotate(90deg);
@@ -73,5 +173,23 @@
     }
     100% {
         transform: translateY(-4px) rotate(90deg);
+    }
+}
+
+// Mobile layput
+@media screen and (max-width: 767px) {
+    .worksGridDiv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .worksGridDiv {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
     }
 }

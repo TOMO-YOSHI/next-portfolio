@@ -3,9 +3,10 @@
 .experienceDiv {
     position: relative;
     height: 85vh;
-    margin: 1rem;
+    margin: 2rem auto;
     margin-top: 15vh;
     // z-index: 50;
+    max-width: 1000px;
 
     h3 {
         color: $orange;
@@ -78,6 +79,12 @@
 .rotateAni {
     display: inline-block;
     animation: moveUpDown 1s infinite;
+}
+
+@media screen and (max-width: 1000px) {
+    .experienceDiv {
+        margin: 20px 16px;
+    }
 }
 
 // Medium devices (tablets, 768px and up)

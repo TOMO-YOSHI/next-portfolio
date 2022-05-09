@@ -3,8 +3,9 @@
 .contactDiv {
     position: relative;
     // height: 85vh;
-    margin: 1rem;
+    margin: 1rem auto;
     margin-top: 15vh;
+    max-width: 1000px;
 }
 
 .contactSectionMainDiv {
@@ -133,6 +134,12 @@
 .rotateAni {
     display: inline-block;
     animation: moveUpDown 1s infinite;
+}
+
+@media screen and (max-width: 1000px) {
+    .contactDiv {
+        margin: 16px;
+    }
 }
 
 @media screen and (max-width: 575px) {

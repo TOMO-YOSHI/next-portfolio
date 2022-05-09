@@ -6,10 +6,14 @@ import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Works from '../components/Works';
 import Contact from '../components/Contact';
+import axios from 'axios';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { API_URL } from '../config'
 
-export default function Home() {
+
+export default function Home({ works }): InferGetServerSidePropsType<typeof getServerSideProps> {
   const Element = Scroll.Element;
-  
+
   return (
     <>
       <Layout>
@@ -26,12 +30,27 @@ export default function Home() {
           <Experience />
         </Element>
         <Element name="works">
-          <Works />
+          <Works works={works} />
         </Element>
         <Element name="contact">
           <Contact />
-        </Element>      
+        </Element>   
       </Layout>
     </>
   )
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const apiConfig = {
+    method: 'GET',
+    url: `${API_URL}/api/works`
+  };
+
+  const res = await axios(apiConfig);
+  const works = res.data;
+
+  return {
+    props: { works }
+  }
+}
+
