@@ -1,0 +1,89 @@
+@import './variables/variables.scss';
+
+.each_work {
+    padding: 1rem;
+    position: relative;
+    transition: .25s ease;
+    cursor: pointer;
+
+    &:hover {
+        outline: $orange solid 2px;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 165, 0, 1);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(255, 165, 0, 1);
+        box-shadow: 0px 0px 10px 0px rgba(255, 165, 0, 1);
+    }
+
+    &:hover .see_more{
+        visibility: visible;
+    }
+
+    h3 {
+        margin: 0;
+        margin-bottom: .25rem;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    img {
+        border: $textWhite solid .1px;
+        width: 100%;
+        height: auto;
+    };
+}
+
+.work_description {
+    font-size: 1rem;
+
+    p {
+        margin: 0;
+        color: $orange;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+
+        &::after {
+            content: " / ";
+        }
+
+        &:last-of-type::after {
+            content: "";
+        }
+    }
+}
+
+.see_more {
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    // z-index: 50; /* Sit on top */
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.6); /* Black w/opacity */
+    // overflow-x: hidden;
+
+    &:active {
+      visibility: hidden;
+    }
+}
+
+.see_more p {
+    font-family: digit;
+    color: $orange;
+    text-shadow: 0 0 3px $orange;
+    letter-spacing: .1rem;
+    font-size: 1.25rem;
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}

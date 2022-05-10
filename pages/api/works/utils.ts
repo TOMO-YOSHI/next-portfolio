@@ -1,20 +1,21 @@
 import { createClient } from 'contentful';
+import { Work } from '../../../types/work';
 
-interface Image {
-  url: string;
-  alt?: string;
-}
+// interface Image {
+//   url: string;
+//   alt?: string;
+// }
 
-interface Work {
-  id: number;
-  name: string;
-  image?: Image;
-  coreTechnology: string[];
-  youtubeIframe?: string;
-  description: string;
-  webPageUrl?: string;
-  githubUrl?: string;
-}
+// export interface Work {
+//   id: number;
+//   name: string;
+//   image?: Image;
+//   coreTechnology: string[];
+//   youtubeIframe?: string;
+//   description: string;
+//   webPageUrl?: string;
+//   githubUrl?: string;
+// }
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE,
@@ -63,6 +64,13 @@ export const getWorksWithAsset = async (type: string | string[] | undefined = un
         workName.slice(workName.indexOf("_") + 1);
     }
 
+    let youTubeUrl = item.fields.youTubeUrl;
+
+    if (youTubeUrl) {
+      youTubeUrl = youTubeUrl.slice(youTubeUrl.indexOf('src="') + 5);
+      youTubeUrl = youTubeUrl.slice(0, youTubeUrl.indexOf('"'));
+    }    
+
     return {
       id: index,
       name: workName,
@@ -71,7 +79,7 @@ export const getWorksWithAsset = async (type: string | string[] | undefined = un
         alt: imageAlt,
       },
       coreTechnology: coreTechnology,
-      youtubeIframe: item.fields.youTubeUrl,
+      youtubeIframe: youTubeUrl,
       description: item.fields.aboutThisWork,
       webPageUrl: item.fields.webPageUrl,
       githubUrl: item.fields.githubUrl
