@@ -83,7 +83,7 @@ export default function Experience() {
                             <p>2022.5 ~ Present</p>
                         </div>
                         <div className={styles.secondDiv}>
-                            <h3>Lead / Full Stack Software Developer</h3>
+                            <h3>Full Stack Software Developer</h3>
                             <p>Robotics Company (BC, Canada)</p>
                             <p>2021.7 ~ 2022.5</p>
                         </div>
