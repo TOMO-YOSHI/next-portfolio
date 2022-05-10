@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { scrollToEle } from '../utils/scroll';
+import { FaTools, FaGithubAlt, FaBriefcase } from 'react-icons/fa';
+import { IconContext } from "react-icons";
 import WorkItem from '../components/WorkItem';
 import Modal from './Modal';
 import { Work } from '../types/work';
@@ -8,6 +10,8 @@ import { API_URL } from '../config'
 import styles from '../styles/Works.module.scss';
 
 export default function Works() {
+    const [hover, setHover] = useState(false);
+    const [hover2, setHover2] = useState(false);
     const [works, setWorks] = useState([])
     const [showModal, setShowModal] = useState(false);
     const [selectedWork, setSelectedWork] = useState<Work | null>(null);
@@ -46,134 +50,65 @@ export default function Works() {
                             openModal={() => openModal(work)} />
                     ))
                 }
-                {/* <div className={styles.each_work}>
-                    <img src={"https://images.ctfassets.net/cggsnbtxpwpk/2Xb0FRp1NupD7xFn3rAkcR/49d028ce967bd57d04a9779f6dab2dc2/savy.png"} alt={"Savy"} />
-                        <h3>{"Savy / React Website"}</h3>
-                        <div className={styles.work_description}>
-                            <p>Core technology</p>
-                            <ul>
-                                <li>React</li>&nbsp;
-                                <li>Redux</li>&nbsp;
-                                <li>Google Maps</li>&nbsp;
-                                <li>Material UI</li>&nbsp;
-                            </ul>
-                        </div>
-                        <a href={"link"}>
-                            <div className={styles.see_more}>
-                                <p>See more</p>
-                            </div>
-                        </a>
-                </div>
-                <div className={styles.each_work}>
-                    <img src={"https://images.ctfassets.net/cggsnbtxpwpk/2Xb0FRp1NupD7xFn3rAkcR/49d028ce967bd57d04a9779f6dab2dc2/savy.png"} alt={"Savy"} />
-                        <h3>{"Savy / React Website"}</h3>
-                        <div className={styles.work_description}>
-                            <p>Core technology</p>
-                            <ul>
-                                <li>React</li>&nbsp;
-                                <li>Redux</li>&nbsp;
-                                <li>Google Maps</li>&nbsp;
-                                <li>Material UI</li>&nbsp;
-                            </ul>
-                        </div>
-                        <a href={"link"}>
-                            <div className={styles.see_more}>
-                                <p>See more</p>
-                            </div>
-                        </a>
-                </div>
-                <div className={styles.each_work}>
-                    <img src={"https://images.ctfassets.net/cggsnbtxpwpk/2Xb0FRp1NupD7xFn3rAkcR/49d028ce967bd57d04a9779f6dab2dc2/savy.png"} alt={"Savy"} />
-                        <h3>{"Savy / React Website"}</h3>
-                        <div className={styles.work_description}>
-                            <p>Core technology</p>
-                            <ul>
-                                <li>React</li>&nbsp;
-                                <li>Redux</li>&nbsp;
-                                <li>Google Maps</li>&nbsp;
-                                <li>Material UI</li>&nbsp;
-                            </ul>
-                        </div>
-                        <a href={"link"}>
-                            <div className={styles.see_more}>
-                                <p>See more</p>
-                            </div>
-                        </a>
-                </div>
-                <div className={styles.each_work}>
-                    <img src={"https://images.ctfassets.net/cggsnbtxpwpk/2Xb0FRp1NupD7xFn3rAkcR/49d028ce967bd57d04a9779f6dab2dc2/savy.png"} alt={"Savy"} />
-                        <h3>{"Savy / React Website"}</h3>
-                        <div className={styles.work_description}>
-                            <p>Core technology</p>
-                            <ul>
-                                <li>React</li>&nbsp;
-                                <li>Redux</li>&nbsp;
-                                <li>Google Maps</li>&nbsp;
-                                <li>Material UI</li>&nbsp;
-                            </ul>
-                        </div>
-                        <a href={"link"}>
-                            <div className={styles.see_more}>
-                                <p>See more</p>
-                            </div>
-                        </a>
-                </div> */}
             </div>
-            {/* <div className={styles.comingSoonDiv}>
-                <div className={styles.comingSoon}>
-                    <IconContext.Provider
-                        value={{
-                            style: {
-                                width: "32px",
-                                height: "32px",
-                                color: "white",
-                            }
-                        }}>
-                        <FaTools />
-                    </IconContext.Provider>
-                    <p>Coming Soon...</p>
-                </div>
-                <div
-                    className={styles.githubLink}
-                    onMouseOver={()=>setHover(true)}
-                    onMouseOut={()=>setHover(false)}
-                >
-                    <a href="https://github.com/TOMO-YOSHI" target="_blank" rel="noopener noreferrer">
+            {
+                works.length === 0 &&
+                <div className={styles.comingSoonDiv}>
+                    <div className={styles.comingSoon}>
                         <IconContext.Provider
                             value={{
                                 style: {
-                                    width: "24px",
-                                    height: "24px",
-                                    color: hover ? "orange" : "white",
-                                    cursor: "pointer"
+                                    width: "32px",
+                                    height: "32px",
+                                    color: "white",
                                 }
                             }}>
-                            <FaGithubAlt />
+                            <FaTools />
                         </IconContext.Provider>
-                        <p>Go to GitHub</p>
-                    </a>
+                        <p>Coming Soon...</p>
+                    </div>
+                    <div
+                        className={styles.githubLink}
+                        onMouseOver={() => setHover(true)}
+                        onMouseOut={() => setHover(false)}
+                    >
+                        <a href="https://github.com/TOMO-YOSHI" target="_blank" rel="noopener noreferrer">
+                            <IconContext.Provider
+                                value={{
+                                    style: {
+                                        width: "24px",
+                                        height: "24px",
+                                        color: hover ? "orange" : "white",
+                                        cursor: "pointer"
+                                    }
+                                }}>
+                                <FaGithubAlt />
+                            </IconContext.Provider>
+                            <p>Go to GitHub</p>
+                        </a>
+                    </div>
+                    <div
+                        className={styles.githubLink}
+                        onMouseOver={() => setHover2(true)}
+                        onMouseOut={() => setHover2(false)}
+                    >
+                        <a href="https://tomohiroyoshida.com/works.html" target="_blank" rel="noopener noreferrer">
+                            <IconContext.Provider
+                                value={{
+                                    style: {
+                                        width: "24px",
+                                        height: "24px",
+                                        color: hover2 ? "orange" : "white",
+                                        cursor: "pointer"
+                                    }
+                                }}>
+                                <FaBriefcase />
+                            </IconContext.Provider>
+                            <p>Previous Portfolio</p>
+                        </a>
+                    </div>
                 </div>
-                <div
-                    className={styles.githubLink}
-                    onMouseOver={()=>setHover2(true)}
-                    onMouseOut={()=>setHover2(false)}
-                >
-                    <a href="https://tomohiroyoshida.com/works.html" target="_blank" rel="noopener noreferrer">
-                        <IconContext.Provider
-                            value={{
-                                style: {
-                                    width: "24px",
-                                    height: "24px",
-                                    color: hover2 ? "orange" : "white",
-                                    cursor: "pointer"
-                                }
-                            }}>
-                            <FaBriefcase />
-                        </IconContext.Provider>
-                        <p>Previous Portfolio</p>
-                    </a>
-                </div>
-            </div> */}
+            }
             <div
                 onClick={() => scrollToEle('contact')}
                 className={styles.nextSection}>
