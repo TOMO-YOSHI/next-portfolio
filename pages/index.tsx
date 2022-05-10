@@ -7,11 +7,11 @@ import Experience from '../components/Experience';
 import Works from '../components/Works';
 import Contact from '../components/Contact';
 import axios from 'axios';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { API_URL } from '../config'
 
 
-export default function Home({ works }): InferGetServerSidePropsType<typeof getServerSideProps> {
+export default function Home({ works }): InferGetStaticPropsType<typeof getStaticProps> {
   const Element = Scroll.Element;
 
   return (
@@ -40,7 +40,7 @@ export default function Home({ works }): InferGetServerSidePropsType<typeof getS
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const apiConfig = {
     method: 'GET',
     url: `${API_URL}/api/works`
