@@ -89,7 +89,7 @@ export default function Experience() {
                         </div>
                         <div className={styles.thirdDiv}>
                             <h3>Web and Mobile App Design and Development</h3>
-                            <p>Studied at Langara College (Vancouver, Canada)</p>
+                            <p>Studied at Langara College (BC, Canada)</p>
                             <p>2020.1 ~ 2021.4</p>
                         </div>
                     </>
