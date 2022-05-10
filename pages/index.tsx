@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import * as Scroll from 'react-scroll';
 import Layout from '../components/Layout';
 import Welcome from '../components/Welcome';
@@ -7,26 +6,9 @@ import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Works from '../components/Works';
 import Contact from '../components/Contact';
-import axios from 'axios';
-import { API_URL } from '../config'
-
 
 export default function Home() {
-  const [works, setWorks] = useState([])
   const Element = Scroll.Element;
-
-  useEffect(() => {
-    (async()=>{
-      const apiConfig = {
-        method: 'GET',
-        url: `${API_URL}/api/works`
-      };
-
-      const res = await axios(apiConfig);
-      const works = res.data;
-      setWorks(works);
-    })()
-  }, [])
 
   return (
     <>
@@ -44,7 +26,7 @@ export default function Home() {
           <Experience />
         </Element>
         <Element name="works">
-          <Works works={works} />
+          <Works />
         </Element>
         <Element name="contact">
           <Contact />

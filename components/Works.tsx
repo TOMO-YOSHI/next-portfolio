@@ -1,25 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { scrollToEle } from '../utils/scroll';
-import { FaTools, FaGithubAlt, FaBriefcase } from 'react-icons/fa';
-import { IconContext } from "react-icons";
 import WorkItem from '../components/WorkItem';
 import Modal from './Modal';
-import ModalContentsWork from '../components/ModalContentsWork'
-import { Work } from '../types/work'
+import { Work } from '../types/work';
+import axios from 'axios';
+import { API_URL } from '../config'
 import styles from '../styles/Works.module.scss';
 
-export default function Works({works}) {
-    const [hover, setHover] = useState(false);
-    const [hover2, setHover2] = useState(false);
+export default function Works() {
+    const [works, setWorks] = useState([])
     const [showModal, setShowModal] = useState(false);
     const [selectedWork, setSelectedWork] = useState<Work | null>(null);
-
-    // console.log('works', works)
 
     const openModal = (work: Work): void => {
         setShowModal(true);
         setSelectedWork(work)
     }
+
+    useEffect(() => {
+        (async () => {
+            const apiConfig = {
+                method: 'GET',
+                url: `${API_URL}/api/works`
+            };
+
+            const res = await axios(apiConfig);
+            const works = res.data;
+            setWorks(works);
+        })()
+    }, [])
 
     return (
         <div
