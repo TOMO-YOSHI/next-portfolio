@@ -78,14 +78,14 @@ export default function Experience() {
                         <div className={styles.secondDot} />
                         <div className={styles.thirdDot} />
                         <div className={styles.firstDiv}>
-                            <h3>Lead Software Developer</h3>
-                            <p>Robotics Company (Vancouver, Canada)</p>
-                            <p>2021.11 ~ Present</p>
+                            <h3>Front End Web Developer</h3>
+                            <p>Design & Marketing Agency (AB, Canada)</p>
+                            <p>2022.5 ~ Present</p>
                         </div>
                         <div className={styles.secondDiv}>
-                            <h3>Full Stack Web Developer</h3>
-                            <p>Robotics Company (Vancouver, Canada)</p>
-                            <p>2021.7 ~ 2021.10</p>
+                            <h3>Lead / Full Stack Software Developer</h3>
+                            <p>Robotics Company (BC, Canada)</p>
+                            <p>2021.7 ~ 2022.5</p>
                         </div>
                         <div className={styles.thirdDiv}>
                             <h3>Web and Mobile App Design and Development</h3>
