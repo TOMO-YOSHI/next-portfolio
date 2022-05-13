@@ -78,7 +78,7 @@ export default function Experience() {
                         <div className={styles.secondDot} />
                         <div className={styles.thirdDot} />
                         <div className={styles.firstDiv}>
-                            <h3>Front End Web Developer</h3>
+                            <h3>Front End Developer</h3>
                             <p>Design & Marketing Agency (AB, Canada)</p>
                             <p>2022.5 ~ Present</p>
                         </div>
@@ -89,7 +89,7 @@ export default function Experience() {
                         </div>
                         <div className={styles.thirdDiv}>
                             <h3>Web and Mobile App Design and Development</h3>
-                            <p>Studied at Langara College (Vancouver, Canada)</p>
+                            <p>Studied at Langara College (BC, Canada)</p>
                             <p>2020.1 ~ 2021.4</p>
                         </div>
                     </>

@@ -82,7 +82,8 @@ export const getWorksWithAsset = async (type: string | string[] | undefined = un
       youtubeIframe: youTubeUrl,
       description: item.fields.aboutThisWork,
       webPageUrl: item.fields.webPageUrl,
-      githubUrl: item.fields.githubUrl
+      githubUrl: item.fields.githubUrl,
+      public: item.fields.public,
     }
   })
 }

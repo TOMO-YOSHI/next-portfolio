@@ -29,7 +29,7 @@ export default function Works() {
             };
 
             const res = await axios(apiConfig);
-            const works = res.data;
+            const works = res.data.filter((el: Work) => el.public === true);
             setWorks(works);
         })()
     }, [])

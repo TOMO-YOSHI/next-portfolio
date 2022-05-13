@@ -12,4 +12,5 @@ export interface Work {
   description: string;
   webPageUrl?: string;
   githubUrl?: string;
+  public?: boolean;
 }
