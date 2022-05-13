@@ -78,7 +78,7 @@ export default function Experience() {
                         <div className={styles.secondDot} />
                         <div className={styles.thirdDot} />
                         <div className={styles.firstDiv}>
-                            <h3>Front End Web Developer</h3>
+                            <h3>Front End Developer</h3>
                             <p>Design & Marketing Agency (AB, Canada)</p>
                             <p>2022.5 ~ Present</p>
                         </div>
