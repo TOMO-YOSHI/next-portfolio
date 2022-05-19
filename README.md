@@ -1,13 +1,34 @@
 # Tomohiro's portfolio website
+
+![portfolio_top](./public/images/next_portfolio.gif)
+
 ## About this project
 
-This is the Next.js version of [my portfolio website](https://tomohirodev.com/).
+This is [the Next.js version of my portfolio website](https://tomohirodev.com/).
 I have updated [the old version of my portofolio](https://github.com/TOMO-YOSHI/portfolio-site).
+
+## Why I created this web application
+
+I created the website because I wanted to understand how to make website with mordan technology, such as Next.js, TypeScript, and so on.
 
 ## Technology stack
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+The technologies listed below are used to create this website.
+
+* Next.js
+* TypeScript
+* Contentful(Headless CMS)
+* SASS
+* Formspree
+
+## Deployment
+
+This project is deployed to [Vercel](https://vercel.com/solutions/nextjs) to minimize development and maintenance costs.
+
+---
+## Original README by `create-next-app`
 ## Getting Started
 
 First, run the development server:
