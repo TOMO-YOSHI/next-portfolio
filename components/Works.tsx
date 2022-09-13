@@ -32,6 +32,7 @@ export default function Works() {
             console.log('apiConfig', apiConfig);
 
             const res = await axios(apiConfig);
+            console.log('res', res);
             const works = res.data.filter((el: Work) => el.public === true);
             setWorks(works);
         })()
