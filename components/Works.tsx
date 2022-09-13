@@ -6,7 +6,7 @@ import WorkItem from '../components/WorkItem';
 import Modal from './Modal';
 import { Work } from '../types/work';
 import axios from 'axios';
-import { API_URL } from '../config'
+// import { API_URL } from '../config'
 import styles from '../styles/Works.module.scss';
 
 export default function Works() {
@@ -23,20 +23,13 @@ export default function Works() {
 
     useEffect(() => {
         (async () => {
-            // const apiConfig = {
-            //     method: 'GET',
-            //     url: `${API_URL}/api/works`
-            // };
+            const apiConfig = {
+                method: 'GET',
+                // url: `${API_URL}/api/works`
+                url: `/api/works`
+            };
 
-            console.log('API_URL', API_URL);
-            // console.log('apiConfig', apiConfig);
-
-            // const res = await axios(apiConfig);
-            const res = await axios.get(`${API_URL}/api/works`).then(res => {
-                console.log('res.data', res.data);
-                return res;
-            });
-            console.log('res', res);
+            const res = await axios(apiConfig);
             const works = res.data.filter((el: Work) => el.public === true);
             setWorks(works);
         })()
