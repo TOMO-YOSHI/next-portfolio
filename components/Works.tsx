@@ -28,6 +28,9 @@ export default function Works() {
                 url: `${API_URL}/api/works`
             };
 
+            console.log('API_URL', API_URL);
+            console.log('apiConfig', apiConfig);
+
             const res = await axios(apiConfig);
             const works = res.data.filter((el: Work) => el.public === true);
             setWorks(works);
