@@ -6,7 +6,7 @@ import WorkItem from '../components/WorkItem';
 import Modal from './Modal';
 import { Work } from '../types/work';
 import axios from 'axios';
-import { API_URL } from '../config'
+// import { API_URL } from '../config'
 import styles from '../styles/Works.module.scss';
 
 export default function Works() {
@@ -25,14 +25,11 @@ export default function Works() {
         (async () => {
             const apiConfig = {
                 method: 'GET',
+                // url: `${API_URL}/api/works`
                 url: `/api/works`
             };
 
-            // console.log('API_URL', API_URL);
-            // console.log('apiConfig', apiConfig);
-
             const res = await axios(apiConfig);
-            // console.log('res', res);
             const works = res.data.filter((el: Work) => el.public === true);
             setWorks(works);
         })()
