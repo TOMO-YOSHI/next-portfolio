@@ -75,10 +75,13 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .profileDiv {
+        height: 100vh;
+    }
+}
+
 @media screen and (max-width: 575px) {
-    // .profileDiv {
-    //     height: 100vh;
-    // }
     .aboutDiv {
         // border: none;
         // -webkit-box-shadow: none;
